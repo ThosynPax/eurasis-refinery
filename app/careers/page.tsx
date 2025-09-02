@@ -3,6 +3,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import Link from "next/link"
 import { Users, Heart, GraduationCap, DollarSign, Calendar, Zap, Shield, Award, TrendingUp } from "lucide-react"
 
 export const metadata = {
@@ -83,7 +84,7 @@ export default function CareersPage() {
         <section className="relative py-20 bg-gradient-to-r from-primary/10 to-accent/10">
           <div className="absolute inset-0">
             <img
-              src="/placeholder.svg?height=400&width=1200"
+              src="/home/2.jpeg?height=400&width=1200"
               alt="Eurasis Refinery Team"
               className="w-full h-full object-cover opacity-20"
             />
@@ -94,14 +95,6 @@ export default function CareersPage() {
               Build your career with industry leaders. At Eurasis Refinery, we're not just refining petroleum—we're
               refining the future of energy.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                View Open Positions
-              </Button>
-              <Button size="lg" variant="outline" className="bg-transparent">
-                Learn About Benefits
-              </Button>
-            </div>
           </div>
         </section>
 
@@ -180,48 +173,6 @@ export default function CareersPage() {
           </div>
         </section>
 
-        {/* Job Listings */}
-        <section className="py-16 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4 font-serif">Current Openings</h2>
-              <p className="text-muted-foreground">Explore opportunities to join our growing team</p>
-            </div>
-            <JobListings />
-          </div>
-        </section>
-
-        {/* Application Process */}
-        <section className="py-16 bg-muted/30">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4 font-serif">Application Process</h2>
-              <p className="text-muted-foreground">Simple steps to join our team</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {[
-                { step: "1", title: "Apply Online", description: "Submit your application and resume" },
-                { step: "2", title: "Initial Review", description: "Our HR team reviews your qualifications" },
-                { step: "3", title: "Interview", description: "Meet with hiring managers and team members" },
-                { step: "4", title: "Welcome Aboard", description: "Join the Eurasis Refinery family" },
-              ].map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="relative mb-6">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-primary-foreground">{step.step}</span>
-                    </div>
-                    {index < 3 && (
-                      <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-border transform translate-x-8"></div>
-                    )}
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground text-sm">{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="py-16 bg-background">
@@ -232,12 +183,13 @@ export default function CareersPage() {
               toward an exciting career.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                Browse All Jobs
-              </Button>
-              <Button size="lg" variant="outline" className="bg-transparent">
-                Contact HR Team
-              </Button>
+             <Button
+              asChild
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              <Link href="/contact">Contact Us</Link>
+            </Button>
             </div>
           </div>
         </section>

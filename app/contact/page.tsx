@@ -105,7 +105,7 @@ export default function ContactPage() {
         <section className="relative py-20 bg-gradient-to-r from-primary/10 to-accent/10">
           <div className="absolute inset-0">
             <img
-              src="/placeholder.svg?height=400&width=1200"
+              src="/home/2.jpeg?height=400&width=1200"
               alt="Contact Eurasis Refinery"
               className="w-full h-full object-cover opacity-20"
             />
@@ -190,44 +190,6 @@ export default function ContactPage() {
                   })}
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Office Locations */}
-        <section className="py-16 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4 font-serif">Our Locations</h2>
-              <p className="text-muted-foreground">Visit us at one of our offices across the United States</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {offices.map((office, index) => (
-                <Card key={index} className="bg-card hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                  <div className="aspect-video overflow-hidden">
-                    <img
-                      src={office.image || "/placeholder.svg"}
-                      alt={office.name}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-xl font-semibold text-card-foreground">{office.name}</CardTitle>
-                    <p className="text-primary font-medium">{office.type}</p>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    <div className="flex items-start space-x-2">
-                      <MapPin className="h-4 w-4 text-muted-foreground mt-1 flex-shrink-0" />
-                      <p className="text-muted-foreground text-sm">{office.address}</p>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Phone className="h-4 w-4 text-muted-foreground" />
-                      <p className="text-muted-foreground text-sm">{office.phone}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
           </div>
         </section>

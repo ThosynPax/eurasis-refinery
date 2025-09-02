@@ -2,6 +2,14 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { 
+  Building2, 
+  Expand, 
+  Award, 
+  Leaf, 
+  Cpu, 
+  Trophy 
+} from "lucide-react"
 
 export const metadata = {
   title: "Our Story - Eurasis Refinery | Journey of Excellence",
@@ -15,37 +23,37 @@ export default function StoryPage() {
       year: "1999",
       title: "Foundation",
       description: "Eurasis Refinery was founded with a vision to revolutionize oil and gas refining in the region.",
-      image: "/placeholder.svg?height=300&width=400",
+      icon: Building2,
     },
     {
       year: "2003",
       title: "First Major Expansion",
       description: "Doubled our refining capacity and introduced advanced distillation technology.",
-      image: "/placeholder.svg?height=300&width=400",
+      icon: Expand,
     },
     {
       year: "2008",
       title: "International Recognition",
       description: "Received ISO 9001 certification and expanded operations to serve international markets.",
-      image: "/placeholder.svg?height=300&width=400",
+      icon: Award,
     },
     {
       year: "2012",
       title: "Green Initiative Launch",
       description: "Launched our comprehensive environmental sustainability program and clean technology adoption.",
-      image: "/placeholder.svg?height=300&width=400",
+      icon: Leaf,
     },
     {
       year: "2018",
       title: "Digital Transformation",
       description: "Implemented AI-driven process optimization and Industry 4.0 technologies.",
-      image: "/placeholder.svg?height=300&width=400",
+      icon: Cpu,
     },
     {
       year: "2024",
       title: "Global Leadership",
       description: "Achieved recognition as one of the world's most efficient and sustainable refineries.",
-      image: "/placeholder.svg?height=300&width=400",
+      icon: Trophy,
     },
   ]
 
@@ -57,7 +65,7 @@ export default function StoryPage() {
         <section className="relative py-20 bg-gradient-to-r from-primary/10 to-accent/10">
           <div className="absolute inset-0">
             <img
-              src="/placeholder.svg?height=400&width=1200"
+              src="/home/2.jpeg?height=400&width=1200"
               alt="Historical Eurasis Refinery"
               className="w-full h-full object-cover opacity-20"
             />
@@ -94,37 +102,36 @@ export default function StoryPage() {
             </div>
 
             <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div
-                  key={index}
-                  className={`flex flex-col lg:flex-row items-center gap-8 ${
-                    index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                  }`}
-                >
-                  <div className="flex-1">
-                    <Card className="bg-card hover:shadow-lg transition-shadow duration-300">
-                      <CardContent className="p-6">
-                        <div className="flex items-center gap-3 mb-4">
-                          <Badge className="bg-primary text-primary-foreground text-lg px-3 py-1">
-                            {milestone.year}
-                          </Badge>
-                          <h3 className="text-2xl font-bold text-foreground font-serif">{milestone.title}</h3>
-                        </div>
-                        <p className="text-muted-foreground leading-relaxed">{milestone.description}</p>
-                      </CardContent>
-                    </Card>
-                  </div>
-                  <div className="flex-1">
-                    <div className="aspect-video overflow-hidden rounded-lg">
-                      <img
-                        src={milestone.image || "/placeholder.svg"}
-                        alt={milestone.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
+              {milestones.map((milestone, index) => {
+                const IconComponent = milestone.icon;
+                return (
+                  <div
+                    key={index}
+                    className={`flex flex-col lg:flex-row items-center gap-8 ${
+                      index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                    }`}
+                  >
+                    <div className="flex-1">
+                      <Card className="bg-card hover:shadow-lg transition-shadow duration-300 border-l-4 border-[#008895]">
+                        <CardContent className="p-6">
+                          <div className="flex items-center gap-3 mb-4">
+                            <Badge className="bg-[#008895] text-white text-lg px-3 py-1">
+                              {milestone.year}
+                            </Badge>
+                            <h3 className="text-2xl font-bold text-foreground font-serif">{milestone.title}</h3>
+                          </div>
+                          <p className="text-muted-foreground leading-relaxed">{milestone.description}</p>
+                        </CardContent>
+                      </Card>
+                    </div>
+                    <div className="flex-1 flex justify-center">
+                      <div className="w-32 h-32 rounded-full bg-[#008895]/10 flex items-center justify-center p-6">
+                        <IconComponent className="w-16 h-16 text-[#008895]" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         </section>
@@ -139,22 +146,31 @@ export default function StoryPage() {
               while contributing to a more sustainable energy landscape.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-              <Card className="bg-card">
+              <Card className="bg-card border-t-4 border-[#008895]">
                 <CardContent className="p-6 text-center">
+                  <div className="w-16 h-16 rounded-full bg-[#008895]/10 flex items-center justify-center mx-auto mb-4">
+                    <Leaf className="w-8 h-8 text-[#008895]" />
+                  </div>
                   <h3 className="text-xl font-semibold text-foreground mb-3">2025 Goals</h3>
                   <p className="text-muted-foreground">
                     Carbon neutral operations and 50% renewable energy integration
                   </p>
                 </CardContent>
               </Card>
-              <Card className="bg-card">
+              <Card className="bg-card border-t-4 border-[#008895]">
                 <CardContent className="p-6 text-center">
+                  <div className="w-16 h-16 rounded-full bg-[#008895]/10 flex items-center justify-center mx-auto mb-4">
+                    <Expand className="w-8 h-8 text-[#008895]" />
+                  </div>
                   <h3 className="text-xl font-semibold text-foreground mb-3">2027 Vision</h3>
                   <p className="text-muted-foreground">Expansion to 60+ countries with advanced biofuel production</p>
                 </CardContent>
               </Card>
-              <Card className="bg-card">
+              <Card className="bg-card border-t-4 border-[#008895]">
                 <CardContent className="p-6 text-center">
+                  <div className="w-16 h-16 rounded-full bg-[#008895]/10 flex items-center justify-center mx-auto mb-4">
+                    <Trophy className="w-8 h-8 text-[#008895]" />
+                  </div>
                   <h3 className="text-xl font-semibold text-foreground mb-3">2030 Mission</h3>
                   <p className="text-muted-foreground">Industry leader in sustainable refining and clean energy</p>
                 </CardContent>

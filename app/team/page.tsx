@@ -105,7 +105,7 @@ export default function TeamPage() {
         <section className="relative py-20 bg-gradient-to-r from-primary/10 to-accent/10">
           <div className="absolute inset-0">
             <img
-              src="/placeholder.svg?height=400&width=1200"
+              src="/home/2.jpeg?height=400&width=1200"
               alt="Eurasis Refinery Team"
               className="w-full h-full object-cover opacity-20"
             />
@@ -223,12 +223,13 @@ export default function TeamPage() {
               career opportunities and become part of our growing family.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">
-                View Open Positions
-              </button>
-              <button className="px-8 py-3 border border-border text-foreground rounded-md hover:bg-muted transition-colors">
-                Learn About Benefits
-              </button>
+             <a
+                href="/contact"
+                className="px-8 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+              >
+                Contact Us
+              </a>
+
             </div>
           </div>
         </section>

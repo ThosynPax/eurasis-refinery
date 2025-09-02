@@ -2,7 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Zap, Wrench, Shield, Truck, BarChart3, Leaf, Users, Clock, CheckCircle, ArrowRight } from "lucide-react"
+import { Zap, Wrench, Shield, Truck, BarChart3, Leaf, Users, Clock, CheckCircle, ArrowRight, Link } from "lucide-react"
 
 export const metadata = {
   title: "Services - Eurasis Refinery | Comprehensive Refining Solutions",
@@ -17,42 +17,36 @@ export default function ServicesPage() {
       title: "Custom Refining",
       description: "Tailored refining solutions to meet your specific product requirements and quality standards.",
       features: ["Flexible Processing", "Custom Blending", "Quality Control", "Batch Processing"],
-      image: "/placeholder.svg?height=300&width=400",
     },
     {
       icon: Shield,
       title: "Quality Assurance",
       description: "Comprehensive testing and certification services to ensure product quality and compliance.",
       features: ["Laboratory Testing", "Certification", "Quality Control", "Compliance Monitoring"],
-      image: "/placeholder.svg?height=300&width=400",
     },
     {
       icon: Truck,
       title: "Logistics & Distribution",
       description: "End-to-end logistics solutions for efficient and safe transportation of petroleum products.",
       features: ["Transportation", "Storage", "Distribution", "Supply Chain Management"],
-      image: "/placeholder.svg?height=300&width=400",
     },
     {
       icon: Wrench,
       title: "Technical Consulting",
       description: "Expert consulting services to optimize your refining operations and improve efficiency.",
       features: ["Process Optimization", "Technical Support", "Training", "Equipment Consulting"],
-      image: "/placeholder.svg?height=300&width=400",
     },
     {
       icon: BarChart3,
       title: "Market Analysis",
       description: "Comprehensive market intelligence and pricing analysis for informed business decisions.",
       features: ["Price Forecasting", "Market Trends", "Competitive Analysis", "Risk Assessment"],
-      image: "/placeholder.svg?height=300&width=400",
     },
     {
       icon: Leaf,
       title: "Environmental Services",
       description: "Sustainable solutions and environmental compliance services for responsible operations.",
       features: ["Emission Control", "Waste Management", "Environmental Monitoring", "Sustainability Consulting"],
-      image: "/placeholder.svg?height=300&width=400",
     },
   ]
 
@@ -94,7 +88,7 @@ export default function ServicesPage() {
         <section className="relative py-20 bg-gradient-to-r from-primary/10 to-accent/10">
           <div className="absolute inset-0">
             <img
-              src="/placeholder.svg?height=400&width=1200"
+              src="/home/2.jpeg?height=400&width=1200"
               alt="Eurasis Refinery Services"
               className="w-full h-full object-cover opacity-20"
             />
@@ -124,13 +118,6 @@ export default function ServicesPage() {
                 const IconComponent = service.icon
                 return (
                   <Card key={index} className="bg-card hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                    <div className="aspect-video overflow-hidden">
-                      <img
-                        src={service.image || "/placeholder.svg"}
-                        alt={service.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
                     <CardHeader>
                       <div className="flex items-center space-x-3 mb-2">
                         <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
@@ -226,12 +213,24 @@ export default function ServicesPage() {
               Contact our team today to discuss your requirements and discover how we can help optimize your operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                Request Consultation
-              </Button>
-              <Button size="lg" variant="outline" className="bg-transparent">
-                Download Brochure
-              </Button>
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              <a href="/contact">Contact Us</a>
+            </Button>
+
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="bg-transparent"
+            >
+              <a href="/products" download>
+                Our Products
+              </a>
+            </Button>
             </div>
           </div>
         </section>

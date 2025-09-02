@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Shield, Zap, Globe, Users, Award, Leaf } from "lucide-react"
+import { ArrowRight, Shield, Zap, Globe, Users, Award, Leaf, Link } from "lucide-react"
 
 export function AboutCompany() {
   return (
@@ -17,14 +17,10 @@ export function AboutCompany() {
               Our commitment to innovation and quality has made us a trusted partner for businesses worldwide,
               processing millions of barrels annually with unmatched efficiency and reliability.
             </p>
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              Learn More About Us
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
           </div>
           <div className="relative">
             <img
-              src="/placeholder.svg?height=500&width=600"
+              src="/home/1.jpeg?height=500&width=600"
               alt="Eurasis Refinery Control Room"
               className="rounded-lg shadow-lg"
             />
@@ -90,17 +86,17 @@ export function WhatWeDo() {
     {
       title: "Crude Oil Refining",
       description: "Advanced distillation and processing of crude oil into high-quality petroleum products.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/home/2.jpeg?height=300&width=400",
     },
     {
       title: "Product Distribution",
       description: "Efficient logistics and supply chain management for global product distribution.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/home/3.jpeg?height=300&width=400",
     },
     {
       title: "Quality Assurance",
       description: "Rigorous testing and quality control to ensure products meet international standards.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/home/4.jpeg?height=300&width=400",
     },
   ]
 
@@ -187,17 +183,29 @@ export function CallToAction() {
           custom quote today and experience the difference quality makes.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
-            Get Your Quote Now
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
+         <a
+            href="/quote"
+            rel="noopener noreferrer"
+          >
+            <Button
+              size="lg"
+              variant="secondary"
+              className="bg-white text-primary hover:bg-gray-100"
+            >
+              Get a Quote
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </a>
+          <a href="/products">
+             <Button
+              size="lg"
+              variant="secondary"
             className="border-white text-white hover:bg-white hover:text-primary bg-transparent"
           >
-            Contact Our Experts
-          </Button>
+            See our Products
+             <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </a>
         </div>
       </div>
     </section>

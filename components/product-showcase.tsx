@@ -9,7 +9,6 @@ interface Product {
   id: string
   name: string
   description: string
-  image: string
   features: string[]
 }
 
@@ -19,7 +18,6 @@ const products: Product[] = [
     name: "Premium Gasoline",
     description:
       "High-octane gasoline refined with advanced technology for optimal engine performance and fuel efficiency.",
-    image: "/placeholder.svg?height=300&width=400",
     features: ["High Octane Rating", "Clean Burning", "Engine Protection", "Fuel Efficiency"],
   },
   {
@@ -27,35 +25,30 @@ const products: Product[] = [
     name: "Ultra-Low Sulfur Diesel",
     description:
       "Clean-burning diesel fuel that meets the highest environmental standards while delivering superior performance.",
-    image: "/placeholder.svg?height=300&width=400",
     features: ["Ultra-Low Sulfur", "High Energy Density", "Cold Weather Performance", "Emission Compliant"],
   },
   {
     id: "jet-fuel",
     name: "Aviation Jet Fuel",
     description: "Premium jet fuel meeting international aviation standards for commercial and military aircraft.",
-    image: "/placeholder.svg?height=300&width=400",
     features: ["Aviation Grade", "Temperature Stable", "Anti-Icing Properties", "High Performance"],
   },
   {
     id: "heating-oil",
     name: "Heating Oil",
     description: "Efficient heating oil for residential and commercial heating systems with consistent quality.",
-    image: "/placeholder.svg?height=300&width=400",
     features: ["Clean Burning", "High BTU Content", "Low Sulfur", "Reliable Supply"],
   },
   {
     id: "lpg",
     name: "Liquefied Petroleum Gas",
     description: "Clean and efficient LPG for industrial, commercial, and residential applications.",
-    image: "/placeholder.svg?height=300&width=400",
     features: ["Clean Energy", "Versatile Use", "High Efficiency", "Environmentally Friendly"],
   },
   {
     id: "lubricants",
     name: "Industrial Lubricants",
     description: "High-performance lubricants for industrial machinery and automotive applications.",
-    image: "/placeholder.svg?height=300&width=400",
     features: ["High Performance", "Extended Life", "Temperature Resistant", "Corrosion Protection"],
   },
 ]
@@ -83,13 +76,6 @@ export function ProductShowcase() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
             <Card key={product.id} className="bg-card hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-              <div className="aspect-video overflow-hidden">
-                <img
-                  src={product.image || "/placeholder.svg"}
-                  alt={product.name}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
               <CardHeader>
                 <CardTitle className="text-xl font-semibold text-card-foreground">{product.name}</CardTitle>
               </CardHeader>

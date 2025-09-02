@@ -46,7 +46,7 @@ export default function AboutPage() {
         <section className="relative py-20 bg-gradient-to-r from-primary/10 to-accent/10">
           <div className="absolute inset-0">
             <img
-              src="/placeholder.svg?height=400&width=1200"
+              src="/home/2.jpeg?height=400&width=1200"
               alt="Eurasis Refinery Facility"
               className="w-full h-full object-cover opacity-20"
             />
@@ -145,12 +145,11 @@ export default function AboutPage() {
               service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                Contact Us Today
-              </Button>
+             <a href="/products">
               <Button size="lg" variant="outline" className="bg-transparent">
                 View Our Products
               </Button>
+            </a>
             </div>
           </div>
         </section>

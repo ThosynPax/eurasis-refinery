@@ -32,12 +32,9 @@ export function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">ER</span>
-              </div>
-              <span className="font-bold text-xl text-foreground">Eurasis Refinery</span>
-            </Link>
+            <a href="/" className="flex items-center space-x-2">
+             <img src="/logo-main.png" alt="Company Logo" className="h-14 w-auto" />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -133,7 +130,11 @@ export function Header() {
                 </div>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">Get Quote</Button>
+               <Link href="/contact" passHref>
+                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                  Get Quote
+                </Button>
+              </Link>
               </div>
             </div>
           </div>

@@ -9,58 +9,6 @@ export function Footer() {
       {/* Enhanced Scam Alert Section */}
       <div className="bg-destructive/10 border-b border-destructive/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            <Alert className="border-destructive/20">
-              <AlertTriangle className="h-5 w-5 text-destructive" />
-              <AlertDescription className="text-destructive">
-                <strong className="text-base">⚠️ SCAM ALERT - PROTECT YOURSELF</strong>
-                <div className="mt-2 space-y-2 text-sm">
-                  <p>
-                    <strong>Eurasis Refinery ONLY conducts business through official channels.</strong> We never request
-                    upfront payments, personal banking details, or cryptocurrency transactions.
-                  </p>
-                  <p>
-                    <strong>Red Flags:</strong> Unsolicited emails offering deals, fake job offers, requests for advance
-                    fees, or urgent payment demands claiming to be from our company.
-                  </p>
-                </div>
-              </AlertDescription>
-            </Alert>
-
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <Shield className="h-5 w-5 text-primary" />
-                <h3 className="font-semibold text-foreground">How to Verify Legitimate Communications</h3>
-              </div>
-              <ul className="text-sm text-muted-foreground space-y-1">
-                <li>
-                  • Always verify through our official phone: <strong>+1 (555) 123-4567</strong>
-                </li>
-                <li>
-                  • Check our official email domain: <strong>@eurasiarefinery.com</strong>
-                </li>
-                <li>
-                  • Visit our official website: <strong>www.eurasiarefinery.com</strong>
-                </li>
-                <li>• All legitimate contracts include our official letterhead and signatures</li>
-              </ul>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground bg-transparent"
-                >
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  Report Scam
-                </Button>
-                <Button size="sm" variant="outline">
-                  <Link href="/scam-alert" className="flex items-center">
-                    Learn More
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
 
           {/* Additional Security Notice */}
           <div className="mt-4 p-4 bg-card/50 rounded-lg border border-border/50">
@@ -175,29 +123,12 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Stay Updated</h3>
-            <p className="text-sm text-muted-foreground">
-              Subscribe to our newsletter for industry insights and company updates.
-            </p>
-            <div className="space-y-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full px-3 py-2 text-sm bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <button className="w-full px-3 py-2 text-sm bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-muted-foreground">© 2024 Eurasis Refinery. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">© 2025 Eurasis Refinery. All rights reserved.</p>
             <div className="flex space-x-6 text-sm">
               <Link href="/terms" className="text-muted-foreground hover:text-foreground transition-colors">
                 Terms of Service

@@ -3,33 +3,36 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
+import Link from "next/link"
+
 
 const slides = [
   {
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/slider/1.jpg?height=600&width=1200",
     title: "Leading the Future of Oil & Gas Refining",
     subtitle:
       "Eurasis Refinery delivers world-class refining solutions with cutting-edge technology, sustainable practices, and unmatched expertise in the energy sector.",
-    primaryButton: "Explore Our Services",
-    secondaryButton: "View Our Story",
+    primaryButton: { label: "Explore Our Services", href: "/services" },
+    secondaryButton: { label: "View Our Story", href: "/story" },
   },
   {
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/slider/2.jpg?height=600&width=1200",
     title: "Advanced Petroleum Processing Excellence",
     subtitle:
       "State-of-the-art facilities and innovative processes ensure the highest quality refined products while maintaining environmental responsibility.",
-    primaryButton: "Our Products",
-    secondaryButton: "Learn More",
+    primaryButton: { label: "Our Products", href: "/products" },
+    secondaryButton: { label: "Learn More", href: "/services" },
   },
   {
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/slider/3.jpg?height=600&width=1200",
     title: "Sustainable Energy Solutions",
     subtitle:
       "Committed to environmental stewardship through clean technology, efficient processes, and sustainable refining practices for a greener future.",
-    primaryButton: "Sustainability",
-    secondaryButton: "Get Quote",
+    primaryButton: { label: "Sustainability", href: "/about" },
+    secondaryButton: { label: "Get Quote", href: "/contact" },
   },
 ]
+
 
 export function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -75,18 +78,27 @@ export function HeroSlider() {
               </h1>
               <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">{slide.subtitle}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  {slide.primaryButton}
+              <Link href={slide.primaryButton.href} passHref>
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                >
+                  {slide.primaryButton.label}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
+              </Link>
+
+              <Link href={slide.secondaryButton.href} passHref>
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-white text-white hover:bg-white hover:text-gray-900 bg-transparent"
                 >
-                  {slide.secondaryButton}
+                  {slide.secondaryButton.label}
                 </Button>
-              </div>
+              </Link>
+            </div>
+
             </div>
           </div>
         </div>
