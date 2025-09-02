@@ -4,11 +4,6 @@ export interface BlogPost {
   title: string
   excerpt: string
   content: string
-  author: {
-    name: string
-    role: string
-    avatar: string
-  }
   publishedAt: string
   readTime: number
   category: string
@@ -69,16 +64,11 @@ The Road Ahead
 As we continue to invest in these technologies, Eurasis Refinery remains committed to leading the industry in innovation while maintaining our focus on safety, efficiency, and environmental responsibility.
 
 The future of oil refining is bright, powered by technology that makes operations smarter, safer, and more sustainable.`,
-    author: {
-      name: "Dr. James Thompson",
-      role: "Chief Technology Officer",
-      avatar: "/placeholder.svg?height=100&width=100",
-    },
     publishedAt: "2025-01-15",
     readTime: 8,
     category: "technology",
     tags: ["AI", "IoT", "Innovation", "Efficiency"],
-    image: "/placeholder.svg?height=400&width=800",
+    image: "/blog/8.jpg?height=400&width=800",
     featured: true,
   },
   {
@@ -131,16 +121,12 @@ Water stewardship remains a priority:
 Looking Forward
 
 These initiatives represent just the beginning of our sustainability journey. We're committed to achieving carbon neutrality by 2030 while continuing to provide the high-quality products our customers depend on.`,
-    author: {
-      name: "David Brown",
-      role: "Environmental & Safety Director",
-      avatar: "/placeholder.svg?height=100&width=100",
-    },
+
     publishedAt: "2025-01-10",
     readTime: 6,
     category: "sustainability",
     tags: ["Environment", "Carbon Reduction", "Renewable Energy", "Sustainability"],
-    image: "/placeholder.svg?height=400&width=800",
+    image: "/blog/2.jpg?height=400&width=800",
     featured: true,
   },
   {
@@ -214,16 +200,12 @@ For Eurasis Refinery, these trends reinforce our strategy of:
 - Strengthening customer relationships globally
 
 The market environment presents opportunities for growth while emphasizing the importance of operational excellence and strategic positioning.`,
-    author: {
-      name: "Jennifer Lee",
-      role: "Commercial Director",
-      avatar: "/placeholder.svg?height=100&width=100",
-    },
+
     publishedAt: "2025-01-08",
     readTime: 10,
     category: "market-trends",
     tags: ["Market Analysis", "Oil Prices", "Global Markets", "Economic Trends"],
-    image: "/placeholder.svg?height=400&width=800",
+    image: "/blog/3.jpg?height=400&width=800",
     featured: false,
   },
   {
@@ -312,16 +294,11 @@ Looking Ahead
 As we continue to grow and evolve, our commitment to safety remains absolute. We're investing in next-generation safety technologies, expanding our training programs, and strengthening our safety culture to ensure that everyone goes home safely every day.
 
 Safety isn't just what we do—it's who we are at Eurasis Refinery.`,
-    author: {
-      name: "Maria Santos",
-      role: "Operations Director",
-      avatar: "/placeholder.svg?height=100&width=100",
-    },
     publishedAt: "2025-01-05",
     readTime: 7,
     category: "safety",
     tags: ["Safety", "Training", "Technology", "Culture"],
-    image: "/placeholder.svg?height=400&width=800",
+    image: "/blog/4.jpg?height=400&width=800",
     featured: false,
   },
   {
@@ -412,16 +389,11 @@ Looking Forward
 This expansion positions Eurasis Refinery as a leader in sustainable refining technology while meeting growing demand for high-quality petroleum products. We're excited about the opportunities this project creates for our employees, community, and customers.
 
 The Future Energy Initiative represents more than just growth—it's our commitment to responsible energy production for generations to come.`,
-    author: {
-      name: "Dr. Sarah Chen",
-      role: "Chief Executive Officer",
-      avatar: "/placeholder.svg?height=100&width=100",
-    },
     publishedAt: "2025-01-03",
     readTime: 9,
     category: "company-news",
     tags: ["Expansion", "Investment", "Jobs", "Sustainability"],
-    image: "/placeholder.svg?height=400&width=800",
+    image: "/blog/5.jpg?height=400&width=800",
     featured: true,
   },
   {
@@ -549,16 +521,11 @@ Conclusion
 Digital transformation isn't just about technology—it's about reimagining how we operate. At Eurasis Refinery, we're leveraging digital technologies to create a safer, more efficient, and more sustainable operation that benefits our employees, customers, and communities.
 
 The future of refining is digital, and we're leading the way.`,
-    author: {
-      name: "Dr. Robert Kim",
-      role: "Head of Engineering",
-      avatar: "/placeholder.svg?height=100&width=100",
-    },
     publishedAt: "2025-01-01",
     readTime: 12,
     category: "technology",
     tags: ["Digital Transformation", "AI", "IoT", "Automation"],
-    image: "/placeholder.svg?height=400&width=800",
+    image: "/blog/6.jpg?height=400&width=800",
     featured: false,
   },
 ]

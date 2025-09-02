@@ -78,10 +78,6 @@ export function BlogListing() {
                     <div className="flex items-center justify-between text-sm text-muted-foreground">
                       <div className="flex items-center space-x-4">
                         <div className="flex items-center space-x-1">
-                          <User className="h-4 w-4" />
-                          <span>{post.author.name}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
                           <Calendar className="h-4 w-4" />
                           <span>{formatDate(post.publishedAt)}</span>
                         </div>
@@ -162,15 +158,9 @@ export function BlogListing() {
                 <p className="text-muted-foreground leading-relaxed line-clamp-3">{post.excerpt}</p>
                 <div className="flex items-center space-x-2 text-xs text-muted-foreground">
                   <div className="flex items-center space-x-1">
-                    <User className="h-3 w-3" />
-                    <span>{post.author.name}</span>
-                  </div>
-                  <span>•</span>
-                  <div className="flex items-center space-x-1">
                     <Calendar className="h-3 w-3" />
                     <span>{formatDate(post.publishedAt)}</span>
                   </div>
-                  <span>•</span>
                   <div className="flex items-center space-x-1">
                     <Clock className="h-3 w-3" />
                     <span>{post.readTime} min</span>
