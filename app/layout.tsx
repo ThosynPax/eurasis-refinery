@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   title: "Eurasis Refinery - Leading Oil & Gas Refining Solutions",
   description:
     "Eurasis Refinery provides world-class oil and gas refining services with cutting-edge technology and sustainable practices.",
+    icons: {
+      icon: "/favicon.png", // path relative to /public
+    },
 }
 
 export default function RootLayout({
