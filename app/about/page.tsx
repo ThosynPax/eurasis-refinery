@@ -145,11 +145,11 @@ export default function AboutPage() {
               service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-             <a href="/products">
-              <Button size="lg" variant="outline" className="bg-transparent">
-                View Our Products
-              </Button>
-            </a>
+              <a href="/products">
+                <Button size="lg" variant="outline" className="bg-transparent">
+                  View Our Products
+                </Button>
+              </a>
             </div>
           </div>
         </section>
