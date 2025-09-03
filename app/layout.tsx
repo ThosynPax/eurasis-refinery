@@ -17,9 +17,9 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: "Eurasis Refinery - Leading Oil & Gas Refining Solutions",
+  title: "Eurasia Energy - Leading Oil & Gas Refining Solutions",
   description:
-    "Eurasis Refinery provides world-class oil and gas refining services with cutting-edge technology and sustainable practices.",
+    "Eurasia Energy provides world-class oil and gas refining services with cutting-edge technology and sustainable practices.",
     icons: {
       icon: "/favicon.png", // path relative to /public
     },
@@ -32,6 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${manrope.variable} antialiased`}>
+      <meta  name="simpledcver"  content="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkb21haW4iOiJldXJhc2lhZW5lcmd5LWt6LmNvbSIsImV4cCI6MTc1NzQ2MjQwMH0.e0bkJ5GMO0OZ3OUGFXlU6lddMvq49bjCSnKwk1i4oNw"></meta>
       <body>{children}</body>
     </html>
   )
