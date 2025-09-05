@@ -3,7 +3,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
-  title: "Products - Eurasis Refinery | Premium Petroleum Products",
+  title: "Products - Eurasia Energy | Premium Petroleum Products",
   description:
     "Explore our comprehensive range of refined petroleum products including gasoline, diesel, jet fuel, and industrial lubricants.",
 }

@@ -7,9 +7,9 @@ import Link from "next/link"
 import { Users, Heart, GraduationCap, DollarSign, Calendar, Zap, Shield, Award, TrendingUp } from "lucide-react"
 
 export const metadata = {
-  title: "Careers - Eurasis Refinery | Join Our Team",
+  title: "Careers - Eurasia Energy | Join Our Team",
   description:
-    "Explore career opportunities at Eurasis Refinery. Join our team of industry professionals and help shape the future of energy.",
+    "Explore career opportunities at Eurasia Energy. Join our team of industry professionals and help shape the future of energy.",
 }
 
 export default function CareersPage() {
@@ -85,14 +85,14 @@ export default function CareersPage() {
           <div className="absolute inset-0">
             <img
               src="/home/2.jpeg?height=400&width=1200"
-              alt="Eurasis Refinery Team"
+              alt="Eurasia Energy Team"
               className="w-full h-full object-cover opacity-20"
             />
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-serif">Join Our Team</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
-              Build your career with industry leaders. At Eurasis Refinery, we're not just refining petroleum—we're
+              Build your career with industry leaders. At Eurasia Energy, we're not just refining petroleum—we're
               refining the future of energy.
             </p>
           </div>
@@ -116,7 +116,7 @@ export default function CareersPage() {
         <section className="py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4 font-serif">Why Choose Eurasis Refinery?</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-4 font-serif">Why Choose Eurasia Energy?</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 We're committed to creating an environment where our employees can thrive, grow, and make a meaningful
                 impact.

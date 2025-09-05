@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Zap, Wrench, Shield, Truck, BarChart3, Leaf, Users, Clock, CheckCircle, ArrowRight, Link } from "lucide-react"
 
 export const metadata = {
-  title: "Services - Eurasis Refinery | Comprehensive Refining Solutions",
+  title: "Services - Eurasia Energy | Comprehensive Refining Solutions",
   description:
     "Explore our comprehensive range of refining services including custom processing, quality assurance, logistics, and technical consulting.",
 }
@@ -89,7 +89,7 @@ export default function ServicesPage() {
           <div className="absolute inset-0">
             <img
               src="/home/2.jpeg?height=400&width=1200"
-              alt="Eurasis Refinery Services"
+              alt="Eurasia Energy Services"
               className="w-full h-full object-cover opacity-20"
             />
           </div>
@@ -183,7 +183,7 @@ export default function ServicesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4 font-serif">Why Choose Us</h2>
-              <p className="text-muted-foreground">The advantages of partnering with Eurasis Refinery</p>
+              <p className="text-muted-foreground">The advantages of partnering with Eurasia Energy</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

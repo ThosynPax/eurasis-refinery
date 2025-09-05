@@ -18,8 +18,6 @@ export function ProductDetail({ product }: ProductDetailProps) {
   const [selectedImage, setSelectedImage] = useState(0)
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false)
 
-  const allImages = [product.image, ...product.gallery]
-
   const getAvailabilityColor = (availability: string) => {
     switch (availability) {
       case "In Stock":
@@ -49,34 +47,6 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Product Images */}
-          <div className="space-y-4">
-            <div className="aspect-square overflow-hidden rounded-lg bg-muted">
-              <img
-                src={allImages[selectedImage] || "/placeholder.svg"}
-                alt={product.name}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            {allImages.length > 1 && (
-              <div className="grid grid-cols-4 gap-2">
-                {allImages.map((image, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setSelectedImage(index)}
-                    className={`aspect-square overflow-hidden rounded-md border-2 transition-colors ${
-                      selectedImage === index ? "border-primary" : "border-border hover:border-muted-foreground"
-                    }`}
-                  >
-                    <img
-                      src={image || "/placeholder.svg"}
-                      alt={`${product.name} ${index + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
 
           {/* Product Info */}
           <div className="space-y-6">

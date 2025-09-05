@@ -7,7 +7,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <img
           src="/placeholder.svg?height=600&width=1200"
-          alt="Eurasis Refinery Industrial Facility"
+          alt="Eurasia Energy Industrial Facility"
           className="w-full h-full object-cover opacity-20"
         />
       </div>
@@ -19,7 +19,7 @@ export function Hero() {
             <span className="text-primary block">Oil & Gas Refining</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Eurasis Refinery delivers world-class refining solutions with cutting-edge technology, sustainable
+            Eurasia Energy delivers world-class refining solutions with cutting-edge technology, sustainable
             practices, and unmatched expertise in the energy sector.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

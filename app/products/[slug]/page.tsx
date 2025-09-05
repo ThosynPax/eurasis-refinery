@@ -15,12 +15,12 @@ export async function generateMetadata({ params }: ProductPageProps) {
 
   if (!product) {
     return {
-      title: "Product Not Found - Eurasis Refinery",
+      title: "Product Not Found - Eurasia Energy",
     }
   }
 
   return {
-    title: `${product.name} - Eurasis Refinery`,
+    title: `${product.name} - Eurasia Energy`,
     description: product.description,
   }
 }

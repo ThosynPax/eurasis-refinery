@@ -5,9 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Phone, Mail, MapPin, Clock, MessageSquare, Briefcase, Truck, Shield } from "lucide-react"
 
 export const metadata = {
-  title: "Contact Us - Eurasis Refinery | Get in Touch",
+  title: "Contact Us - Eurasia Energy | Get in Touch",
   description:
-    "Contact Eurasis Refinery for inquiries about our products, services, partnerships, or general information. Multiple ways to reach our team.",
+    "Contact Eurasia Energy for inquiries about our products, services, partnerships, or general information. Multiple ways to reach our team.",
 }
 
 export default function ContactPage() {
@@ -106,7 +106,7 @@ export default function ContactPage() {
           <div className="absolute inset-0">
             <img
               src="/home/2.jpeg?height=400&width=1200"
-              alt="Contact Eurasis Refinery"
+              alt="Contact Eurasia Energy"
               className="w-full h-full object-cover opacity-20"
             />
           </div>

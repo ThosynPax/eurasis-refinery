@@ -51,6 +51,42 @@ const products: Product[] = [
     description: "High-performance lubricants for industrial machinery and automotive applications.",
     features: ["High Performance", "Extended Life", "Temperature Resistant", "Corrosion Protection"],
   },
+  {
+    id: "marine-fuel",
+    name: "Marine Fuel Oil",
+    description: "Heavy fuel oil specially formulated for marine vessels and shipping industry applications.",
+    features: ["High Viscosity", "Marine Grade", "Sulfur Compliant", "Cost Effective"],
+  },
+  {
+    id: "bitumen",
+    name: "Industrial Bitumen",
+    description: "Premium grade bitumen for road construction, roofing, and waterproofing applications.",
+    features: ["Durable", "Weather Resistant", "High Adhesion", "Versatile Applications"],
+  },
+  {
+    id: "petrochemicals",
+    name: "Petrochemical Feedstocks",
+    description: "High-purity chemical feedstocks for plastics, fertilizers, and chemical manufacturing.",
+    features: ["High Purity", "Consistent Quality", "Multiple Grades", "Industrial Grade"],
+  },
+  {
+    id: "base-oils",
+    name: "Refined Base Oils",
+    description: "High-quality base oils for lubricant manufacturing and specialty oil applications.",
+    features: ["Group I-IV Available", "High Viscosity Index", "Oxidation Stable", "Custom Blending"],
+  },
+  {
+    id: "avgas",
+    name: "Aviation Gasoline",
+    description: "Specialized gasoline for piston-engine aircraft with strict quality and performance standards.",
+    features: ["Aviation Grade", "High Octane", "Lead-Free Options", "Reliable Performance"],
+  },
+  {
+    id: "bunker-fuel",
+    name: "Bunker Fuel",
+    description: "Heavy residual fuel for large ships and power generation with high energy content.",
+    features: ["High Density", "Economic", "ISO Compliant", "Global Availability"],
+  }
 ]
 
 export function ProductShowcase() {

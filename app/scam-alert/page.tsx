@@ -6,14 +6,14 @@ import { Button } from "@/components/ui/button"
 import { AlertTriangle, Shield, Phone, Mail, MapPin, ExternalLink } from "lucide-react"
 
 export const metadata = {
-  title: "Scam Alert - Eurasis Refinery | Protect Yourself from Fraud",
+  title: "Scam Alert - Eurasia Energy | Protect Yourself from Fraud",
   description:
-    "Important security information to protect yourself from fraudulent activities claiming to represent Eurasis Refinery.",
+    "Important security information to protect yourself from fraudulent activities claiming to represent Eurasia Energy.",
 }
 
 export default function ScamAlertPage() {
   const warningSigns = [
-    "Unsolicited emails or calls claiming to represent Eurasis Refinery",
+    "Unsolicited emails or calls claiming to represent Eurasia Energy",
     "Requests for upfront payments or fees before product delivery",
     "Offers that seem too good to be true or significantly below market rates",
     "Pressure to make immediate decisions or payments",
@@ -80,7 +80,7 @@ export default function ScamAlertPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-serif">Security Alert</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Protect yourself from fraudulent activities. Learn how to identify and avoid scams claiming to represent
-              Eurasis Refinery.
+              Eurasia Energy.
             </p>
           </div>
         </section>
@@ -91,7 +91,7 @@ export default function ScamAlertPage() {
             <Alert className="border-destructive/20 bg-destructive/5">
               <AlertTriangle className="h-5 w-5 text-destructive" />
               <AlertDescription className="text-destructive font-medium text-lg">
-                <strong>IMPORTANT:</strong> Eurasis Refinery has become aware of fraudulent activities where scammers
+                <strong>IMPORTANT:</strong> Eurasia Energy has become aware of fraudulent activities where scammers
                 impersonate our company to deceive potential customers. We NEVER request upfront payments or conduct
                 business through unofficial channels. Always verify communications through our official contact
                 information.
@@ -131,7 +131,7 @@ export default function ScamAlertPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4 font-serif">How to Verify Legitimacy</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Follow these steps to verify if a communication is genuinely from Eurasis Refinery.
+                Follow these steps to verify if a communication is genuinely from Eurasia Energy.
               </p>
             </div>
 
@@ -160,7 +160,7 @@ export default function ScamAlertPage() {
               </div>
               <h2 className="text-3xl font-bold text-foreground mb-4 font-serif">Official Contact Information</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Use only these verified contact methods to communicate with Eurasis Refinery.
+                Use only these verified contact methods to communicate with Eurasia Energy.
               </p>
             </div>
 
@@ -198,7 +198,7 @@ export default function ScamAlertPage() {
               <CardContent className="space-y-6">
                 <p className="text-muted-foreground text-center leading-relaxed">
                   If you have encountered suspicious activity or believe you have been targeted by scammers claiming to
-                  represent Eurasis Refinery, please report it immediately.
+                  represent Eurasia Energy, please report it immediately.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -7,9 +7,9 @@ export function AboutCompany() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-serif">About Eurasis Refinery</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-serif">About Eurasia Energy</h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              For over three decades, Eurasis Refinery has been at the forefront of petroleum refining excellence. We
+              For over three decades, Eurasia Energy has been at the forefront of petroleum refining excellence. We
               combine cutting-edge technology with sustainable practices to deliver premium refined products while
               maintaining the highest safety and environmental standards.
             </p>
@@ -21,7 +21,7 @@ export function AboutCompany() {
           <div className="relative">
             <img
               src="/home/1.jpeg?height=500&width=600"
-              alt="Eurasis Refinery Control Room"
+              alt="Eurasia Energy Control Room"
               className="rounded-lg shadow-lg"
             />
           </div>
@@ -179,7 +179,7 @@ export function CallToAction() {
           Ready to Partner with Industry Leaders?
         </h2>
         <p className="text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-          Join thousands of satisfied customers who trust Eurasis Refinery for their petroleum product needs. Get a
+          Join thousands of satisfied customers who trust Eurasia Energy for their petroleum product needs. Get a
           custom quote today and experience the difference quality makes.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

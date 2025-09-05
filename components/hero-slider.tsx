@@ -11,7 +11,7 @@ const slides = [
     image: "/slider/1.jpg?height=600&width=1200",
     title: "Leading the Future of Oil & Gas Refining",
     subtitle:
-      "Eurasis Refinery delivers world-class refining solutions with cutting-edge technology, sustainable practices, and unmatched expertise in the energy sector.",
+      "Eurasia Energy delivers world-class refining solutions with cutting-edge technology, sustainable practices, and unmatched expertise in the energy sector.",
     primaryButton: { label: "Explore Our Services", href: "/services" },
     secondaryButton: { label: "View Our Story", href: "/story" },
   },
@@ -64,7 +64,7 @@ export function HeroSlider() {
           <div className="absolute inset-0">
             <img
               src={slide.image || "/placeholder.svg"}
-              alt="Eurasis Refinery Facility"
+              alt="Eurasia Energy Facility"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40" />

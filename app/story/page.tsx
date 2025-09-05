@@ -12,9 +12,9 @@ import {
 } from "lucide-react"
 
 export const metadata = {
-  title: "Our Story - Eurasis Refinery | Journey of Excellence",
+  title: "Our Story - Eurasia Energy | Journey of Excellence",
   description:
-    "Discover the remarkable journey of Eurasis Refinery from a small operation to a global leader in oil and gas refining.",
+    "Discover the remarkable journey of Eurasia Energy from a small operation to a global leader in oil and gas refining.",
 }
 
 export default function StoryPage() {
@@ -22,7 +22,7 @@ export default function StoryPage() {
     {
       year: "1999",
       title: "Foundation",
-      description: "Eurasis Refinery was founded with a vision to revolutionize oil and gas refining in the region.",
+      description: "Eurasia Energy was founded with a vision to revolutionize oil and gas refining in the region.",
       icon: Building2,
     },
     {
@@ -66,14 +66,14 @@ export default function StoryPage() {
           <div className="absolute inset-0">
             <img
               src="/home/2.jpeg?height=400&width=1200"
-              alt="Historical Eurasis Refinery"
+              alt="Historical Eurasia Energy"
               className="w-full h-full object-cover opacity-20"
             />
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-serif">Our Story</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              From humble beginnings to global leadership - discover the remarkable journey that shaped Eurasis Refinery
+              From humble beginnings to global leadership - discover the remarkable journey that shaped Eurasia Energy
               into the industry leader we are today.
             </p>
           </div>

@@ -5,9 +5,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Users, Award, Globe, Zap } from "lucide-react"
 
 export const metadata = {
-  title: "About Us - Eurasis Refinery | Leading Oil & Gas Refining Solutions",
+  title: "About Us - Eurasia Energy | Leading Oil & Gas Refining Solutions",
   description:
-    "Learn about Eurasis Refinery's commitment to excellence in oil and gas refining with cutting-edge technology and sustainable practices.",
+    "Learn about Eurasia Energy's commitment to excellence in oil and gas refining with cutting-edge technology and sustainable practices.",
 }
 
 export default function AboutPage() {
@@ -47,12 +47,12 @@ export default function AboutPage() {
           <div className="absolute inset-0">
             <img
               src="/home/2.jpeg?height=400&width=1200"
-              alt="Eurasis Refinery Facility"
+              alt="Eurasia Energy Facility"
               className="w-full h-full object-cover opacity-20"
             />
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-serif">About Eurasis Refinery</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-serif">About Eurasia Energy</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               For over two decades, we've been at the forefront of oil and gas refining, delivering premium products and
               innovative solutions to customers worldwide.
@@ -141,7 +141,7 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-foreground mb-4 font-serif">Ready to Work With Us?</h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Discover how Eurasis Refinery can meet your energy needs with our premium products and exceptional
+              Discover how Eurasia Energy can meet your energy needs with our premium products and exceptional
               service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

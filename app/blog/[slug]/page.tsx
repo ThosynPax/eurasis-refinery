@@ -15,12 +15,12 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
 
   if (!post) {
     return {
-      title: "Post Not Found - Eurasis Refinery Blog",
+      title: "Post Not Found - Eurasia Energy Blog",
     }
   }
 
   return {
-    title: `${post.title} - Eurasis Refinery Blog`,
+    title: `${post.title} - Eurasia Energy Blog`,
     description: post.excerpt,
   }
 }

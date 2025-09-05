@@ -5,8 +5,8 @@ import { Badge } from "@/components/ui/badge"
 import { Linkedin, Mail } from "lucide-react"
 
 export const metadata = {
-  title: "Our Team - Eurasis Refinery | Leadership & Expertise",
-  description: "Meet the experienced leadership team and industry experts driving innovation at Eurasis Refinery.",
+  title: "Our Team - Eurasia Energy | Leadership & Expertise",
+  description: "Meet the experienced leadership team and industry experts driving innovation at Eurasia Energy.",
 }
 
 export default function TeamPage() {
@@ -16,15 +16,15 @@ export default function TeamPage() {
       position: "Chief Executive Officer",
       experience: "25+ years",
       education: "PhD Chemical Engineering, MIT",
-      image: "/placeholder.svg?height=400&width=400",
-      bio: "Leading Eurasis Refinery with a vision for sustainable energy solutions and operational excellence.",
+      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      bio: "Leading Eurasia Energy with a vision for sustainable energy solutions and operational excellence.",
     },
     {
       name: "Michael Rodriguez",
       position: "Chief Operating Officer",
       experience: "22+ years",
       education: "MS Petroleum Engineering, Stanford",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "https://randomuser.me/api/portraits/men/32.jpg",
       bio: "Overseeing daily operations and driving efficiency improvements across all refining processes.",
     },
     {
@@ -32,15 +32,15 @@ export default function TeamPage() {
       position: "Chief Technology Officer",
       experience: "20+ years",
       education: "PhD Process Engineering, Caltech",
-      image: "/placeholder.svg?height=400&width=400",
-      bio: "Leading technological innovation and digital transformation initiatives at Eurasis Refinery.",
+      image: "https://randomuser.me/api/portraits/men/45.jpg",
+      bio: "Leading technological innovation and digital transformation initiatives at Eurasia Energy.",
     },
     {
       name: "Lisa Wang",
       position: "Chief Financial Officer",
       experience: "18+ years",
       education: "MBA Finance, Wharton",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "https://randomuser.me/api/portraits/women/55.jpg",
       bio: "Managing financial strategy and ensuring sustainable growth for the organization.",
     },
   ]
@@ -51,42 +51,42 @@ export default function TeamPage() {
       head: "Dr. Robert Kim",
       members: 180,
       description: "Process optimization, equipment design, and technical innovation",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://randomuser.me/api/portraits/men/22.jpg",
     },
     {
       name: "Operations",
       head: "Maria Santos",
       members: 450,
       description: "Daily refining operations, maintenance, and safety management",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://randomuser.me/api/portraits/women/33.jpg",
     },
     {
       name: "Quality Assurance",
       head: "Dr. Ahmed Hassan",
       members: 85,
       description: "Product testing, quality control, and compliance monitoring",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://randomuser.me/api/portraits/men/34.jpg",
     },
     {
       name: "Research & Development",
       head: "Dr. Emily Johnson",
       members: 120,
       description: "Innovation, new product development, and process improvement",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://randomuser.me/api/portraits/women/29.jpg",
     },
     {
       name: "Environmental & Safety",
       head: "David Brown",
       members: 95,
       description: "Environmental compliance, safety protocols, and sustainability",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://randomuser.me/api/portraits/men/36.jpg",
     },
     {
       name: "Commercial",
       head: "Jennifer Lee",
       members: 75,
       description: "Sales, marketing, customer relations, and business development",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://randomuser.me/api/portraits/women/41.jpg",
     },
   ]
 
@@ -106,7 +106,7 @@ export default function TeamPage() {
           <div className="absolute inset-0">
             <img
               src="/home/2.jpeg?height=400&width=1200"
-              alt="Eurasis Refinery Team"
+              alt="Eurasia Energy Team"
               className="w-full h-full object-cover opacity-20"
             />
           </div>
@@ -149,7 +149,7 @@ export default function TeamPage() {
                 <Card key={index} className="bg-card hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                   <div className="aspect-square overflow-hidden">
                     <img
-                      src={leader.image || "/placeholder.svg"}
+                      src={leader.image}
                       alt={leader.name}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
@@ -195,7 +195,7 @@ export default function TeamPage() {
                 <Card key={index} className="bg-card hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                   <div className="aspect-video overflow-hidden">
                     <img
-                      src={dept.image || "/placeholder.svg"}
+                      src={dept.image}
                       alt={dept.name}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />

@@ -3,9 +3,9 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
-  title: "Blog - Eurasis Refinery | Industry Insights & Updates",
+  title: "Blog - Eurasia Energy | Industry Insights & Updates",
   description:
-    "Stay informed with the latest insights on oil refining, market trends, technology innovations, and company updates from Eurasis Refinery.",
+    "Stay informed with the latest insights on oil refining, market trends, technology innovations, and company updates from Eurasia Energy.",
 }
 
 export default function BlogPage() {

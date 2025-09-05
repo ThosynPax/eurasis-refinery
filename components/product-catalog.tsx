@@ -44,16 +44,25 @@ export function ProductCatalog() {
   }
 
   return (
-    <div className="py-16 bg-background">
+    <div className="bg-background ">
+              <section className="relative py-20 bg-gradient-to-r from-primary/10 to-accent/10">
+          <div className="absolute inset-0">
+            <img
+              src="/home/2.jpeg?height=400&width=1200"
+              alt="Eurasia Energy Services"
+              className="w-full h-full object-cover opacity-20"
+            />
+          </div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-serif">Our Product Catalog</h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Discover our comprehensive range of premium petroleum products, engineered for excellence and environmental
+            responsibility.
+            </p>
+          </div>
+        </section>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-foreground mb-4 font-serif">Our Product Catalog</h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Discover our comprehensive range of premium petroleum products, engineered for excellence and environmental
-            responsibility.
-          </p>
-        </div>
 
         {/* Search and Filter */}
         <div className="mb-8 space-y-4 md:space-y-0 md:flex md:items-center md:space-x-4">
@@ -94,13 +103,6 @@ export function ProductCatalog() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProducts.map((product) => (
             <Card key={product.id} className="bg-card hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-              <div className="aspect-video overflow-hidden">
-                <img
-                  src={product.image || "/placeholder.svg"}
-                  alt={product.name}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
               <CardHeader className="space-y-2">
                 <div className="flex items-start justify-between">
                   <CardTitle className="text-xl font-semibold text-card-foreground">{product.name}</CardTitle>
