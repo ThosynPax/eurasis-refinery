@@ -136,7 +136,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-muted-foreground">© 2014-2025 Eurasia Energy. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">© 2012-2025 Eurasia Energy. All rights reserved.</p>
             <div className="flex space-x-6 text-sm">
               <Link href="/terms" className="text-muted-foreground hover:text-foreground transition-colors">
                 Terms of Service

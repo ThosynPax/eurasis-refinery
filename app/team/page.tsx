@@ -99,8 +99,8 @@ export default function TeamPage() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-serif">Our Team</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Meet the exceptional professionals who drive innovation, ensure quality, and deliver excellence at Eurasis
-              Refinery every day.
+              Meet the exceptional professionals who drive innovation, ensure quality, and deliver excellence at Eurasia
+              Energy every day.
             </p>
           </div>
         </section>

@@ -6,87 +6,101 @@ import { Button } from "@/components/ui/button"
 import { QuoteModal } from "@/components/quote-modal"
 
 interface Product {
-  id: string
   name: string
-  description: string
-  features: string[]
+  specifications: Record<string, string>
 }
 
 const products: Product[] = [
   {
-    id: "gasoline",
     name: "Premium Gasoline",
-    description:
-      "High-octane gasoline refined with advanced technology for optimal engine performance and fuel efficiency.",
-    features: ["High Octane Rating", "Clean Burning", "Engine Protection", "Fuel Efficiency"],
+    specifications: {
+      "Octane Rating": "91-93 RON",
+      Density: "0.72-0.78 g/cm³",
+      "Sulfur Content": "< 10 ppm",
+      "Benzene Content": "< 1% vol",
+      "Lead Content": "< 0.005 g/L",
+    },
   },
   {
-    id: "diesel",
     name: "Ultra-Low Sulfur Diesel",
-    description:
-      "Clean-burning diesel fuel that meets the highest environmental standards while delivering superior performance.",
-    features: ["Ultra-Low Sulfur", "High Energy Density", "Cold Weather Performance", "Emission Compliant"],
+    specifications: {
+      "Sulfur Content": "< 15 ppm",
+      "Cetane Number": "≥ 40",
+      Density: "0.82-0.86 g/cm³",
+      "Flash Point": "≥ 52°C",
+      "Cloud Point": "Variable by season",
+    },
   },
   {
-    id: "jet-fuel",
     name: "Aviation Jet Fuel",
-    description: "Premium jet fuel meeting international aviation standards for commercial and military aircraft.",
-    features: ["Aviation Grade", "Temperature Stable", "Anti-Icing Properties", "High Performance"],
+    specifications: {
+      "Fuel Type": "Jet A-1",
+      Density: "0.775-0.840 g/cm³",
+      "Flash Point": "≥ 38°C",
+      "Freezing Point": "≤ -47°C",
+      "Smoke Point": "≥ 25 mm",
+    },
   },
   {
-    id: "heating-oil",
     name: "Heating Oil",
-    description: "Efficient heating oil for residential and commercial heating systems with consistent quality.",
-    features: ["Clean Burning", "High BTU Content", "Low Sulfur", "Reliable Supply"],
+    specifications: {
+      Grade: "No. 2 Fuel Oil",
+      "Sulfur Content": "< 500 ppm",
+      "BTU Content": "≥ 138,000 BTU/gal",
+      "Flash Point": "≥ 38°C",
+      "Pour Point": "≤ -6°C",
+    },
   },
   {
-    id: "lpg",
     name: "Liquefied Petroleum Gas",
-    description: "Clean and efficient LPG for industrial, commercial, and residential applications.",
-    features: ["Clean Energy", "Versatile Use", "High Efficiency", "Environmentally Friendly"],
+    specifications: {
+      Composition: "Propane/Butane Mix",
+      Purity: "≥ 95%",
+      "Vapor Pressure": "Variable by mix",
+      "Calorific Value": "≥ 46 MJ/kg",
+      "Sulfur Content": "≤ 50 mg/kg",
+    },
   },
   {
-    id: "lubricants",
     name: "Industrial Lubricants",
-    description: "High-performance lubricants for industrial machinery and automotive applications.",
-    features: ["High Performance", "Extended Life", "Temperature Resistant", "Corrosion Protection"],
+    specifications: {
+      "Viscosity Range": "ISO VG 32-680",
+      "Temperature Range": "-40°C to +200°C",
+      "Oxidation Stability": "Excellent",
+      "Wear Protection": "Superior",
+      "Water Resistance": "High",
+    },
   },
   {
-    id: "marine-fuel",
     name: "Marine Fuel Oil",
-    description: "Heavy fuel oil specially formulated for marine vessels and shipping industry applications.",
-    features: ["High Viscosity", "Marine Grade", "Sulfur Compliant", "Cost Effective"],
+    specifications: {
+      Grade: "IFO 180-380",
+      "Sulfur Content": "< 0.5%",
+      Viscosity: "180-380 cSt",
+      "Flash Point": "≥ 60°C",
+      "Pour Point": "≤ 30°C",
+    },
   },
   {
-    id: "bitumen",
     name: "Industrial Bitumen",
-    description: "Premium grade bitumen for road construction, roofing, and waterproofing applications.",
-    features: ["Durable", "Weather Resistant", "High Adhesion", "Versatile Applications"],
+    specifications: {
+      Penetration: "40-300 dmm",
+      "Softening Point": "35-70°C",
+      "Ductility": "100+ cm",
+      "Flash Point": "≥ 250°C",
+      Purity: "99.5%",
+    },
   },
   {
-    id: "petrochemicals",
     name: "Petrochemical Feedstocks",
-    description: "High-purity chemical feedstocks for plastics, fertilizers, and chemical manufacturing.",
-    features: ["High Purity", "Consistent Quality", "Multiple Grades", "Industrial Grade"],
+    specifications: {
+      Purity: "≥ 99.5%",
+      "Composition": "Various Hydrocarbons",
+      "Impurity Level": "< 0.5%",
+      "Boiling Range": "Variable by product",
+      "Sulfur Content": "< 10 ppm",
+    },
   },
-  {
-    id: "base-oils",
-    name: "Refined Base Oils",
-    description: "High-quality base oils for lubricant manufacturing and specialty oil applications.",
-    features: ["Group I-IV Available", "High Viscosity Index", "Oxidation Stable", "Custom Blending"],
-  },
-  {
-    id: "avgas",
-    name: "Aviation Gasoline",
-    description: "Specialized gasoline for piston-engine aircraft with strict quality and performance standards.",
-    features: ["Aviation Grade", "High Octane", "Lead-Free Options", "Reliable Performance"],
-  },
-  {
-    id: "bunker-fuel",
-    name: "Bunker Fuel",
-    description: "Heavy residual fuel for large ships and power generation with high energy content.",
-    features: ["High Density", "Economic", "ISO Compliant", "Global Availability"],
-  }
 ]
 
 export function ProductShowcase() {
@@ -110,23 +124,28 @@ export function ProductShowcase() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
-            <Card key={product.id} className="bg-card hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+          {products.map((product, index) => (
+            <Card key={index} className="bg-card hover:shadow-lg transition-shadow duration-300 overflow-hidden">
               <CardHeader>
                 <CardTitle className="text-xl font-semibold text-card-foreground">{product.name}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">{product.description}</p>
-
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-foreground">Key Features:</h4>
-                  <ul className="grid grid-cols-2 gap-1 text-sm text-muted-foreground">
-                    {product.features.map((feature, index) => (
-                      <li key={index} className="flex items-center">
-                        <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>
-                        {feature}
+                  <h4 className="font-semibold text-foreground text-sm">Specifications:</h4>
+                  <ul className="grid grid-cols-1 gap-1 text-sm text-muted-foreground">
+                    {Object.entries(product.specifications)
+                      .slice(0, 3)
+                      .map(([key, value], specIndex) => (
+                        <li key={specIndex} className="flex items-center">
+                          <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0"></span>
+                          <span className="font-medium">{key}:</span> {value}
+                        </li>
+                      ))}
+                    {Object.keys(product.specifications).length > 3 && (
+                      <li className="text-xs text-muted-foreground/70">
+                        +{Object.keys(product.specifications).length - 3} more specifications
                       </li>
-                    ))}
+                    )}
                   </ul>
                 </div>
 

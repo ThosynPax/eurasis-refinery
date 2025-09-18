@@ -13,8 +13,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 interface Product {
   id: string
   name: string
-  description: string
-  features: string[]
 }
 
 interface QuoteModalProps {
@@ -27,10 +25,8 @@ export function QuoteModal({ isOpen, onClose, product }: QuoteModalProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    country: "",
     phone: "",
     company: "",
-    quantity: "",
     message: "",
   })
 
@@ -42,10 +38,8 @@ export function QuoteModal({ isOpen, onClose, product }: QuoteModalProps) {
     setFormData({
       name: "",
       email: "",
-      country: "",
       phone: "",
       company: "",
-      quantity: "",
       message: "",
     })
     onClose()
@@ -87,25 +81,7 @@ export function QuoteModal({ isOpen, onClose, product }: QuoteModalProps) {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="country">Country *</Label>
-              <Select value={formData.country} onValueChange={(value) => handleInputChange("country", value)}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select country" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="us">United States</SelectItem>
-                  <SelectItem value="ca">Canada</SelectItem>
-                  <SelectItem value="uk">United Kingdom</SelectItem>
-                  <SelectItem value="de">Germany</SelectItem>
-                  <SelectItem value="fr">France</SelectItem>
-                  <SelectItem value="jp">Japan</SelectItem>
-                  <SelectItem value="au">Australia</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
+          <div className="space-y-2">
             <div className="space-y-2">
               <Label htmlFor="phone">Phone Number *</Label>
               <Input
@@ -125,27 +101,6 @@ export function QuoteModal({ isOpen, onClose, product }: QuoteModalProps) {
               value={formData.company}
               onChange={(e) => handleInputChange("company", e.target.value)}
               placeholder="Enter your company name"
-            />
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="quantity">Estimated Quantity</Label>
-            <Input
-              id="quantity"
-              value={formData.quantity}
-              onChange={(e) => handleInputChange("quantity", e.target.value)}
-              placeholder="e.g., 10,000 gallons, 500 barrels"
-            />
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="message">Additional Requirements</Label>
-            <Textarea
-              id="message"
-              value={formData.message}
-              onChange={(e) => handleInputChange("message", e.target.value)}
-              placeholder="Please describe your specific requirements, delivery timeline, or any other details..."
-              rows={3}
             />
           </div>
 

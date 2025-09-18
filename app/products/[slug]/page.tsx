@@ -21,7 +21,6 @@ export async function generateMetadata({ params }: ProductPageProps) {
 
   return {
     title: `${product.name} - Eurasia Energy`,
-    description: product.description,
   }
 }
 

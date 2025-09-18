@@ -15,23 +15,21 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Phone",
-      primary: "+1 (555) 123-4567",
-      secondary: "24/7 Emergency: +1 (555) 123-4911",
+      primary: "+7 775 357 3822",
       description: "Speak directly with our customer service team",
     },
     {
       icon: Mail,
       title: "Email",
-      primary: "info@eurasiarefinery.com",
-      secondary: "sales@eurasiarefinery.com",
+      primary: "office@eurasiarefinery.com",
+      secondary: "procurement@eurasiarefinery.com",
       description: "Send us your inquiries and we'll respond within 24 hours",
     },
     {
       icon: MapPin,
       title: "Address",
-      primary: "1234 Refinery Blvd",
-      secondary: "Houston, TX 77001, USA",
-      description: "Visit our headquarters and main refining facility",
+      primary: "Astana, Nura District,",
+      secondary: "Korgalzhyn Highway, 11, KV 19",
     },
     {
       icon: Clock,
@@ -42,60 +40,8 @@ export default function ContactPage() {
     },
   ]
 
-  const departments = [
-    {
-      icon: MessageSquare,
-      title: "General Inquiries",
-      email: "info@eurasiarefinery.com",
-      phone: "+1 (555) 123-4567",
-      description: "General questions, information requests, and customer support",
-    },
-    {
-      icon: Briefcase,
-      title: "Sales & Business",
-      email: "sales@eurasiarefinery.com",
-      phone: "+1 (555) 123-4568",
-      description: "Product inquiries, quotes, partnerships, and business development",
-    },
-    {
-      icon: Truck,
-      title: "Logistics & Supply",
-      email: "logistics@eurasiarefinery.com",
-      phone: "+1 (555) 123-4569",
-      description: "Shipping, delivery, supply chain, and distribution inquiries",
-    },
-    {
-      icon: Shield,
-      title: "Safety & Compliance",
-      email: "safety@eurasiarefinery.com",
-      phone: "+1 (555) 123-4570",
-      description: "Safety reports, compliance issues, and regulatory matters",
-    },
-  ]
-
-  const offices = [
-    {
-      name: "Houston Headquarters",
-      address: "1234 Refinery Blvd, Houston, TX 77001",
-      phone: "+1 (555) 123-4567",
-      type: "Main Office & Refinery",
-      image: "/placeholder.svg?height=300&width=400",
-    },
-    {
-      name: "New York Office",
-      address: "567 Energy Plaza, New York, NY 10001",
-      phone: "+1 (555) 234-5678",
-      type: "Commercial Office",
-      image: "/placeholder.svg?height=300&width=400",
-    },
-    {
-      name: "Los Angeles Office",
-      address: "890 Pacific Coast Hwy, Los Angeles, CA 90210",
-      phone: "+1 (555) 345-6789",
-      type: "West Coast Operations",
-      image: "/placeholder.svg?height=300&width=400",
-    },
-  ]
+  // Google Maps embed URL for the address
+  const mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2054.3761325570654!2d69.2691709756654!3d50.447103187605975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424793aa3191f59f%3A0xf129a41cb3a9c1dd!2sKorgalzhyn%20Nature%20Reserve!5e1!3m2!1sen!2sng!4v1758232771741!5m2!1sen!2sng`
 
   return (
     <div className="min-h-screen bg-background">
@@ -151,44 +97,11 @@ export default function ContactPage() {
         {/* Contact Form and Departments */}
         <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 gap-12">
               {/* Contact Form */}
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-6 font-serif">Send Us a Message</h2>
                 <ContactForm />
-              </div>
-
-              {/* Departments */}
-              <div>
-                <h2 className="text-3xl font-bold text-foreground mb-6 font-serif">Contact by Department</h2>
-                <div className="space-y-6">
-                  {departments.map((dept, index) => {
-                    const IconComponent = dept.icon
-                    return (
-                      <Card key={index} className="bg-card">
-                        <CardContent className="p-6">
-                          <div className="flex items-start space-x-4">
-                            <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                              <IconComponent className="h-5 w-5 text-primary" />
-                            </div>
-                            <div className="flex-1">
-                              <h3 className="text-lg font-semibold text-foreground mb-2">{dept.title}</h3>
-                              <p className="text-muted-foreground text-sm mb-3">{dept.description}</p>
-                              <div className="space-y-1 text-sm">
-                                <p className="text-foreground">
-                                  <strong>Email:</strong> {dept.email}
-                                </p>
-                                <p className="text-foreground">
-                                  <strong>Phone:</strong> {dept.phone}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    )
-                  })}
-                </div>
               </div>
             </div>
           </div>
@@ -199,15 +112,21 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-foreground mb-4 font-serif">Find Us</h2>
-              <p className="text-muted-foreground">Our Houston headquarters and main refining facility</p>
+              <p className="text-muted-foreground">Our headquarters in Astana, Kazakhstan</p>
             </div>
             <div className="bg-card rounded-lg overflow-hidden shadow-lg">
-              <div className="aspect-video bg-muted flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <p className="text-foreground font-semibold">Interactive Map</p>
-                  <p className="text-muted-foreground text-sm">1234 Refinery Blvd, Houston, TX 77001</p>
-                </div>
+              <div className="aspect-video">
+                <iframe
+                  src={mapUrl}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Eurasia Energy Location Map"
+                  className="w-full h-full"
+                />
               </div>
             </div>
           </div>
