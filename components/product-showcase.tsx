@@ -12,95 +12,53 @@ interface Product {
 
 const products: Product[] = [
   {
-    name: "Premium Gasoline",
-    specifications: {
-      "Octane Rating": "91-93 RON",
-      Density: "0.72-0.78 g/cm³",
-      "Sulfur Content": "< 10 ppm",
-      "Benzene Content": "< 1% vol",
-      "Lead Content": "< 0.005 g/L",
+      name: "Crude Oil ESPO",
+      specifications: {"Freezing point": "-45°C", "GOST R 51858-2002 Standard": ""}
     },
-  },
-  {
-    name: "Ultra-Low Sulfur Diesel",
-    specifications: {
-      "Sulfur Content": "< 15 ppm",
-      "Cetane Number": "≥ 40",
-      Density: "0.82-0.86 g/cm³",
-      "Flash Point": "≥ 52°C",
-      "Cloud Point": "Variable by season",
+    {
+      name: "Light Crude Oil (LCO)",
+      specifications: {"Freezing point": "-60°C", "30-40° Standard": ""}
     },
-  },
-  {
-    name: "Aviation Jet Fuel",
-    specifications: {
-      "Fuel Type": "Jet A-1",
-      Density: "0.775-0.840 g/cm³",
-      "Flash Point": "≥ 38°C",
-      "Freezing Point": "≤ -47°C",
-      "Smoke Point": "≥ 25 mm",
+    {
+      name: "EN 590-10ppm",
+      specifications: {"Freezing point": "-10°C", "Euro 5 Standard": ""}
     },
-  },
-  {
-    name: "Heating Oil",
-    specifications: {
-      Grade: "No. 2 Fuel Oil",
-      "Sulfur Content": "< 500 ppm",
-      "BTU Content": "≥ 138,000 BTU/gal",
-      "Flash Point": "≥ 38°C",
-      "Pour Point": "≤ -6°C",
+    {
+      name: "Virgin Base Oil",
+      specifications: {"Freezing point": "+20-30°C", "ISO 8217 Standard": ""}
     },
-  },
-  {
-    name: "Liquefied Petroleum Gas",
-    specifications: {
-      Composition: "Propane/Butane Mix",
-      Purity: "≥ 95%",
-      "Vapor Pressure": "Variable by mix",
-      "Calorific Value": "≥ 46 MJ/kg",
-      "Sulfur Content": "≤ 50 mg/kg",
+    {
+      name: "Diesel Fuel Oil D6",
+      specifications: {"Freezing point": "+20-40°C", "ASTM D396 Standard": ""}
     },
-  },
-  {
-    name: "Industrial Lubricants",
-    specifications: {
-      "Viscosity Range": "ISO VG 32-680",
-      "Temperature Range": "-40°C to +200°C",
-      "Oxidation Stability": "Excellent",
-      "Wear Protection": "Superior",
-      "Water Resistance": "High",
+    {
+      name: "Petroleum Coke",
+      specifications: {"Freezing point": "NA", "ASTM D4931/ISO 12982": ""}
     },
-  },
-  {
-    name: "Marine Fuel Oil",
-    specifications: {
-      Grade: "IFO 180-380",
-      "Sulfur Content": "< 0.5%",
-      Viscosity: "180-380 cSt",
-      "Flash Point": "≥ 60°C",
-      "Pour Point": "≤ 30°C",
+    {
+      name: "Bitumen",
+      specifications: {"Freezing point": "NA", "ASTM D946/EN12591 Standard": ""}
     },
-  },
-  {
-    name: "Industrial Bitumen",
-    specifications: {
-      Penetration: "40-300 dmm",
-      "Softening Point": "35-70°C",
-      "Ductility": "100+ cm",
-      "Flash Point": "≥ 250°C",
-      Purity: "99.5%",
+    {
+      name: "Jet A-1",
+      specifications: {"Freezing point": "≤ - 47°C", "DEF STAN 91-091/ASTM D1655": ""}
     },
-  },
-  {
-    name: "Petrochemical Feedstocks",
-    specifications: {
-      Purity: "≥ 99.5%",
-      "Composition": "Various Hydrocarbons",
-      "Impurity Level": "< 0.5%",
-      "Boiling Range": "Variable by product",
-      "Sulfur Content": "< 10 ppm",
+    {
+      name: "UREA",
+      specifications: {"Freezing point": "-11°C", "ISO 22241 Standard": ""}
     },
-  },
+    {
+      name: "D2",
+      specifications: {"Freezing point": "-10°C", "GOST 305-82 Standard": ""}
+    },
+    {
+      name: "LNG",
+      specifications: {"Freezing point": "-162°C", "ISO 16903/ASTM D1945 Standard": ""}
+    },
+    {
+      name: "LPG",
+      specifications: {"Freezing point": "NA", "ASTM D1825/ISO 9162 Standard": ""}
+    }
 ]
 
 export function ProductShowcase() {
