@@ -10,38 +10,34 @@ export const metadata = {
 
 export default function TeamPage() {
   const leadership = [
-    {
-      name: "Dr. Sarah Chen",
+        {
+      name: "Altaev Akylbek Medetovich",
       position: "Chief Executive Officer",
-      experience: "25+ years",
-      education: "PhD Chemical Engineering, MIT",
-      image: "/team/5.png",
-      bio: "Leading Eurasia Energy with a vision for sustainable energy solutions and operational excellence.",
-    },
-    {
-      name: "Michael Rodriguez",
-      position: "Chief Operating Officer",
-      experience: "22+ years",
-      education: "MS Petroleum Engineering, Stanford",
-       image: "/team/6.png",
-      bio: "Overseeing daily operations and driving efficiency improvements across all refining processes.",
-    },
-    {
-      name: "Dr. James Thompson",
-      position: "Chief Technology Officer",
-      experience: "20+ years",
-      education: "PhD Process Engineering, Caltech",
-       image: "/team/7.png",
-      bio: "Leading technological innovation and digital transformation initiatives at Eurasia Energy.",
-    },
-    {
-      name: "Lisa Wang",
-      position: "Chief Financial Officer",
       experience: "18+ years",
       education: "MBA Finance, Wharton",
       image: "/team/8.png",
-      bio: "Managing financial strategy and ensuring sustainable growth for the organization.",
     },
+    {
+      name: "Ospanov Kirill",
+      position: "Export Director",
+      experience: "25+ years",
+      education: "PhD Chemical Engineering, MIT",
+      image: "/team/5.png",
+    },
+    {
+      name: "Akhmetov Timur",
+      position: "Director",
+      experience: "22+ years",
+      education: "MS Petroleum Engineering, Stanford",
+       image: "/team/6.png",
+    },
+    {
+      name: "Aydova Viktoriya",
+      position: "General Sectary",
+      experience: "20+ years",
+      education: "Bsc Accounting, Wharton",
+       image: "/team/7.png",
+    }
   ]
 
  const departments = [
@@ -135,7 +131,6 @@ export default function TeamPage() {
                       </Badge>
                       <p className="text-sm text-muted-foreground">{leader.education}</p>
                     </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">{leader.bio}</p>
                     <div className="flex space-x-2">
                       <button className="p-2 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
                         <Linkedin className="h-4 w-4 text-primary" />
