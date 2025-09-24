@@ -29,20 +29,58 @@ export function QuoteModal({ isOpen, onClose, product }: QuoteModalProps) {
     company: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Quote request submitted:", { product: product?.name, ...formData })
-    // Reset form and close modal
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      message: "",
-    })
-    onClose()
+    setIsSubmitting(true)
+
+    try {
+      // Send form data to FormSubmit.co
+      const response = await fetch("https://formsubmit.co/ajax/export@eurasiaenergy-kz.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          message: formData.message,
+          product: product?.name,
+          subject: `Quote Request for ${product?.name}`,
+          _replyto: formData.email, // Auto-reply to customer
+          _template: "table", // Optional: makes email look nicer
+          _subject: `New Quote Request: ${product?.name}`
+        })
+      })
+
+      if (response.ok) {
+        console.log("Quote request submitted successfully")
+        // Reset form and close modal
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          message: "",
+        })
+        onClose()
+        
+        // Optional: Show success message to user
+        alert("Thank you! Your quote request has been sent successfully.")
+      } else {
+        throw new Error("Failed to submit form")
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      // Optional: Show error message to user
+      alert("Sorry, there was an error sending your request. Please try again or contact us directly.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleInputChange = (field: string, value: string) => {
@@ -66,6 +104,7 @@ export function QuoteModal({ isOpen, onClose, product }: QuoteModalProps) {
                 onChange={(e) => handleInputChange("name", e.target.value)}
                 required
                 placeholder="Enter your full name"
+                disabled={isSubmitting}
               />
             </div>
             <div className="space-y-2">
@@ -77,6 +116,7 @@ export function QuoteModal({ isOpen, onClose, product }: QuoteModalProps) {
                 onChange={(e) => handleInputChange("email", e.target.value)}
                 required
                 placeholder="Enter your email"
+                disabled={isSubmitting}
               />
             </div>
           </div>
@@ -90,6 +130,7 @@ export function QuoteModal({ isOpen, onClose, product }: QuoteModalProps) {
                 onChange={(e) => handleInputChange("phone", e.target.value)}
                 required
                 placeholder="Enter your phone number"
+                disabled={isSubmitting}
               />
             </div>
           </div>
@@ -101,15 +142,38 @@ export function QuoteModal({ isOpen, onClose, product }: QuoteModalProps) {
               value={formData.company}
               onChange={(e) => handleInputChange("company", e.target.value)}
               placeholder="Enter your company name"
+              disabled={isSubmitting}
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="message">Additional Message</Label>
+            <Textarea
+              id="message"
+              value={formData.message}
+              onChange={(e) => handleInputChange("message", e.target.value)}
+              placeholder="Any specific requirements or questions..."
+              rows={3}
+              disabled={isSubmitting}
             />
           </div>
 
           <div className="flex gap-3 pt-4">
-            <Button type="button" variant="outline" onClick={onClose} className="flex-1 bg-transparent">
+            <Button 
+              type="button" 
+              variant="outline" 
+              onClick={onClose} 
+              className="flex-1 bg-transparent"
+              disabled={isSubmitting}
+            >
               Cancel
             </Button>
-            <Button type="submit" className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground">
-              Submit Quote Request
+            <Button 
+              type="submit" 
+              className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Sending..." : "Submit Quote Request"}
             </Button>
           </div>
         </form>

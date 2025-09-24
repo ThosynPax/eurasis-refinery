@@ -21,22 +21,64 @@ export function ContactForm() {
     message: "",
     inquiryType: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Contact form submitted:", formData)
-    // Reset form
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      company: "",
-      subject: "",
-      message: "",
-      inquiryType: "",
-    })
+    setIsSubmitting(true)
+
+    try {
+      // Send form data to FormSubmit.co
+      const response = await fetch("https://formsubmit.co/ajax/export@eurasiaenergy-kz.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          subject: formData.subject,
+          message: formData.message,
+          inquiryType: formData.inquiryType,
+          fullName: `${formData.firstName} ${formData.lastName}`,
+          _replyto: formData.email, // Auto-reply to customer
+          _template: "table", // Makes email look nicer
+          _subject: `Contact Form: ${formData.subject || 'New Inquiry'}`,
+          _cc: formData.email // Optional: CC the customer
+        })
+      })
+
+      if (response.ok) {
+        console.log("Contact form submitted successfully")
+        
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          company: "",
+          subject: "",
+          message: "",
+          inquiryType: "",
+        })
+        
+        // Show success message to user
+        alert("Thank you! Your message has been sent successfully. We'll respond within 24 hours during business days.")
+      } else {
+        throw new Error("Failed to submit form")
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      // Show error message to user
+      alert("Sorry, there was an error sending your message. Please try again or contact us directly at export@eurasiaenergy-kz.com")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleInputChange = (field: string, value: string) => {
@@ -56,6 +98,7 @@ export function ContactForm() {
                 onChange={(e) => handleInputChange("firstName", e.target.value)}
                 required
                 placeholder="Enter your first name"
+                disabled={isSubmitting}
               />
             </div>
             <div className="space-y-2">
@@ -66,6 +109,7 @@ export function ContactForm() {
                 onChange={(e) => handleInputChange("lastName", e.target.value)}
                 required
                 placeholder="Enter your last name"
+                disabled={isSubmitting}
               />
             </div>
           </div>
@@ -80,6 +124,7 @@ export function ContactForm() {
                 onChange={(e) => handleInputChange("email", e.target.value)}
                 required
                 placeholder="Enter your email"
+                disabled={isSubmitting}
               />
             </div>
             <div className="space-y-2">
@@ -89,6 +134,7 @@ export function ContactForm() {
                 value={formData.phone}
                 onChange={(e) => handleInputChange("phone", e.target.value)}
                 placeholder="Enter your phone number"
+                disabled={isSubmitting}
               />
             </div>
           </div>
@@ -100,12 +146,17 @@ export function ContactForm() {
               value={formData.company}
               onChange={(e) => handleInputChange("company", e.target.value)}
               placeholder="Enter your company name"
+              disabled={isSubmitting}
             />
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="inquiryType">Inquiry Type *</Label>
-            <Select value={formData.inquiryType} onValueChange={(value) => handleInputChange("inquiryType", value)}>
+            <Select 
+              value={formData.inquiryType} 
+              onValueChange={(value) => handleInputChange("inquiryType", value)}
+              disabled={isSubmitting}
+            >
               <SelectTrigger>
                 <SelectValue placeholder="Select inquiry type" />
               </SelectTrigger>
@@ -129,6 +180,7 @@ export function ContactForm() {
               onChange={(e) => handleInputChange("subject", e.target.value)}
               required
               placeholder="Brief subject of your inquiry"
+              disabled={isSubmitting}
             />
           </div>
 
@@ -141,11 +193,16 @@ export function ContactForm() {
               required
               placeholder="Please provide details about your inquiry..."
               rows={5}
+              disabled={isSubmitting}
             />
           </div>
 
-          <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-            Send Message
+          <Button 
+            type="submit" 
+            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Sending Message..." : "Send Message"}
           </Button>
 
           <p className="text-xs text-muted-foreground text-center">
