@@ -131,14 +131,6 @@ export default function TeamPage() {
                       </Badge>
                       <p className="text-sm text-muted-foreground">{leader.education}</p>
                     </div>
-                    <div className="flex space-x-2">
-                      <button className="p-2 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
-                        <Linkedin className="h-4 w-4 text-primary" />
-                      </button>
-                      <button className="p-2 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors">
-                        <Mail className="h-4 w-4 text-primary" />
-                      </button>
-                    </div>
                   </CardContent>
                 </Card>
               ))}
