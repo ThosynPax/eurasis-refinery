@@ -22,8 +22,9 @@ export function Footer() {
       </div>
 
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -39,27 +40,6 @@ export function Footer() {
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <MapPin className="h-4 w-4" />
                 <span>Astana, Nura District, Korgalzhyn Highway, 11, KV 19</span>
-              </div>
-              <div className="flex items-center space-x-2 text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span>+7 775 357 3822</span>
-              </div>
-              <div className="flex items-center space-x-2 text-muted-foreground">
-                <Mail className="h-4 w-4" />
-                <span>info@eurasiarefinery.com</span>
-              </div>
-              <div className="flex items-center space-x-2 text-muted-foreground">
-                <span>BIN: 061240013150</span>
-              </div>
-              <div className="flex items-center space-x-2 text-muted-foreground">
-                <span>KATO: 711510000</span>
-              </div>
-              <div className="flex items-center space-x-2 text-muted-foreground">
-                <span>Leaders: Altayev Akylbek Medetovich</span>
-              </div>
-              <div className="flex items-center space-x-2 text-destructive font-medium">
-                <Shield className="h-4 w-4" />
-                <span>Fraud Hotline: +7 775 357 3822</span>
               </div>
             </div>
           </div>
@@ -129,6 +109,28 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
+          </div>
+          <div className="space-y-4">
+          <h3 className="font-semibold text-foreground">Follow Us</h3>
+             <div className="space-y-2 text-sm">
+              <div className="flex items-center space-x-2 text-muted-foreground">
+                <Phone className="h-4 w-4" />
+                <span>+7 775 357 3822</span>
+              </div>
+              <div className="flex items-center space-x-2 text-muted-foreground">
+                <Mail className="h-4 w-4" />
+                <span>info@eurasiarefinery.com</span>
+              </div>
+              <div className="flex items-center space-x-2 text-muted-foreground">
+                <span>BIN: 061240013150</span>
+              </div>
+              <div className="flex items-center space-x-2 text-muted-foreground">
+                <span>KATO: 711510000</span>
+              </div>
+              <div className="flex items-center space-x-2 text-muted-foreground">
+                <span>Leaders: Altayev Akylbek Medetovich</span>
+              </div>
+            </div>
           </div>
 
         </div>

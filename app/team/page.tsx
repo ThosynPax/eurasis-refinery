@@ -2,7 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Wrench, Factory, Mail, Linkedin, ShieldCheck, FlaskConical, Leaf, Briefcase } from "lucide-react"
+import { Wrench, Factory, Linkedin, Mail, ShieldCheck, FlaskConical, Leaf, Briefcase } from "lucide-react"
 export const metadata = {
   title: "Our Team - Eurasia Energy | Leadership & Expertise",
   description: "Meet the experienced leadership team and industry experts driving innovation at Eurasia Energy.",
@@ -13,30 +13,30 @@ export default function TeamPage() {
         {
       name: "Altaev Akylbek Medetovich",
       position: "Chief Executive Officer",
-      experience: "18+ years",
-      education: "MBA Finance, Wharton",
       image: "/team/8.png",
+      linkedin: "#", 
+      email: "export@eurasiaenergy.com",
     },
-    {
-      name: "Ospanov Kirill",
-      position: "Export Director",
-      experience: "25+ years",
-      education: "PhD Chemical Engineering, MIT",
-      image: "/team/5.png",
-    },
-    {
+        {
       name: "Akhmetov Timur",
       position: "Director",
-      experience: "22+ years",
-      education: "MS Petroleum Engineering, Stanford",
        image: "/team/6.png",
+        linkedin: "#", 
+      email: "export@eurasiaenergy.com",
     },
     {
       name: "Aydova Viktoriya",
       position: "General Sectary",
-      experience: "20+ years",
-      education: "Bsc Accounting, Wharton",
        image: "/team/7.png",
+        linkedin: "#", 
+      email: "export@eurasiaenergy.com",
+    },
+        {
+      name: "Ospanov Kirill",
+      position: "Export Director",
+      image: "/team/5.png",
+       linkedin: "#", 
+      email: "export@eurasiaenergy.com",
     }
   ]
 
@@ -123,15 +123,30 @@ export default function TeamPage() {
                     />
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-foreground mb-1">{leader.name}</h3>
-                    <p className="text-primary font-semibold mb-2">{leader.position}</p>
-                    <div className="space-y-2 mb-4">
-                      <Badge variant="secondary" className="bg-muted text-muted-foreground">
-                        {leader.experience}
-                      </Badge>
-                      <p className="text-sm text-muted-foreground">{leader.education}</p>
-                    </div>
-                  </CardContent>
+                  <h3 className="text-xl font-bold text-foreground mb-1">{leader.name}</h3>
+                  <p className="text-primary font-semibold mb-2">{leader.position}</p>
+                  
+                  <div className="flex items-center gap-3 mt-4">
+                    {/* LinkedIn */}
+                    <a 
+                      href={leader.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition"
+                    >
+                      <Linkedin className="h-5 w-5" />
+                    </a>
+
+                    {/* Email */}
+                    <a 
+                      href={`mailto:${leader.email}`} 
+                      className="text-muted-foreground hover:text-primary transition"
+                    >
+                      <Mail className="h-5 w-5" />
+                    </a>
+                  </div>
+                </CardContent>
+
                 </Card>
               ))}
             </div>
