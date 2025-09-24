@@ -28,10 +28,9 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">ER</span>
-              </div>
-              <span className="font-bold text-lg text-foreground">Eurasia Energy</span>
+                <a href="/" className="flex items-center space-x-2">
+                <img src="/logo-main.png" alt="Company Logo" className="h-14 w-auto" />
+                </a>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Leading the future of oil and gas refining with cutting-edge technology and sustainable practices.
