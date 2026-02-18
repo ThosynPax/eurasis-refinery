@@ -1,0 +1,66 @@
+
+> my-v0-project@0.1.0 build
+> next build
+
+   ▲ Next.js 15.2.7
+
+   Creating an optimized production build ...
+
+
+Retrying 1/3...
+
+
+Retrying 2/3...
+
+
+Retrying 3/3...
+[AggregateError: ] { code: 'ETIMEDOUT' }
+Failed to compile.
+
+app/layout.tsx
+`next/font` error:
+Failed to fetch `Manrope` from Google Fonts.
+
+app/layout.tsx
+An error occurred in `next/font`.
+
+NextFontError: Failed to fetch `Manrope` from Google Fonts.
+    at nextFontError (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/@next/font/dist/next-font-error.js:8:17)
+    at nextFontGoogleFontLoader (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/@next/font/dist/google/loader.js:97:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Span.traceAsyncFn (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/trace/trace.js:157:20)
+    at async /home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:84:87
+    at async Span.traceAsyncFn (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/trace/trace.js:157:20)
+    at tryRunOrWebpackError (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/webpack/bundle5.js:29:316142)
+    at __webpack_require_module__ (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/webpack/bundle5.js:29:131548)
+    at __nested_webpack_require_161494__ (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/webpack/bundle5.js:29:130983)
+    at /home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/webpack/bundle5.js:29:131840
+    at symbolIterator (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/neo-async/async.js:1:14444)
+    at done (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/neo-async/async.js:1:14824)
+    at Hook.eval [as callAsync] (eval at create (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/webpack/bundle5.js:14:9224), <anonymous>:15:1)
+    at /home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/webpack/bundle5.js:29:130703
+    at symbolIterator (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/neo-async/async.js:1:14402)
+    at timesSync (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/neo-async/async.js:1:5027)
+-- inner error --
+NextFontError: Failed to fetch `Manrope` from Google Fonts.
+    at nextFontError (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/@next/font/dist/next-font-error.js:8:17)
+    at nextFontGoogleFontLoader (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/@next/font/dist/google/loader.js:97:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Span.traceAsyncFn (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/trace/trace.js:157:20)
+    at async /home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:84:87
+    at async Span.traceAsyncFn (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/trace/trace.js:157:20)
+    at Object.<anonymous> (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/font/google/target.css?{"path":"app/layout.tsx","import":"Manrope","arguments":[{"subsets":["latin"],"display":"swap","variable":"--font-manrope"}],"variableName":"manrope"}:1:7)
+    at /home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/webpack/bundle5.js:29:962742
+    at Hook.eval [as call] (eval at create (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/webpack/bundle5.js:14:9002), <anonymous>:7:1)
+    at /home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/webpack/bundle5.js:29:131581
+    at tryRunOrWebpackError (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/webpack/bundle5.js:29:316096)
+    at __webpack_require_module__ (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/webpack/bundle5.js:29:131548)
+    at __nested_webpack_require_161494__ (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/webpack/bundle5.js:29:130983)
+    at /home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/webpack/bundle5.js:29:131840
+    at symbolIterator (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/neo-async/async.js:1:14444)
+    at done (/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/compiled/neo-async/async.js:1:14824)
+
+Generated code for /home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!/home/thosyn/TPC/Completed/eurasis-refinery/node_modules/next/font/google/target.css?{"path":"app/layout.tsx","import":"Manrope","arguments":[{"subsets":["latin"],"display":"swap","variable":"--font-manrope"}],"variableName":"manrope"}
+
+
+> Build failed because of webpack errors
