@@ -68,7 +68,7 @@ export function QuoteModal({ isOpen, onClose, product }: QuoteModalProps) {
           message: "",
         })
         onClose()
-        
+
         // Optional: Show success message to user
         alert("Thank you! Your quote request has been sent successfully.")
       } else {
@@ -159,17 +159,17 @@ export function QuoteModal({ isOpen, onClose, product }: QuoteModalProps) {
           </div>
 
           <div className="flex gap-3 pt-4">
-            <Button 
-              type="button" 
-              variant="outline" 
-              onClick={onClose} 
+            <Button
+              type="button"
+              variant="outline"
+              onClick={onClose}
               className="flex-1 bg-transparent"
               disabled={isSubmitting}
             >
               Cancel
             </Button>
-            <Button 
-              type="submit" 
+            <Button
+              type="submit"
               className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground"
               disabled={isSubmitting}
             >

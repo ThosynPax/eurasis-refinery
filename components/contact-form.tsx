@@ -29,7 +29,7 @@ export function ContactForm() {
 
     try {
       // Send form data to FormSubmit.co
-      const response = await fetch("https://formsubmit.co/ajax/export@eurasiaenergy-kz.com", {
+      const response = await fetch("https://formsubmit.co/ajax/officr@eurasiaenergy-kz.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -54,7 +54,7 @@ export function ContactForm() {
 
       if (response.ok) {
         console.log("Contact form submitted successfully")
-        
+
         // Reset form
         setFormData({
           firstName: "",
@@ -66,7 +66,7 @@ export function ContactForm() {
           message: "",
           inquiryType: "",
         })
-        
+
         // Show success message to user
         alert("Thank you! Your message has been sent successfully. We'll respond within 24 hours during business days.")
       } else {
@@ -152,8 +152,8 @@ export function ContactForm() {
 
           <div className="space-y-2">
             <Label htmlFor="inquiryType">Inquiry Type *</Label>
-            <Select 
-              value={formData.inquiryType} 
+            <Select
+              value={formData.inquiryType}
               onValueChange={(value) => handleInputChange("inquiryType", value)}
               disabled={isSubmitting}
             >
@@ -197,8 +197,8 @@ export function ContactForm() {
             />
           </div>
 
-          <Button 
-            type="submit" 
+          <Button
+            type="submit"
             className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
             disabled={isSubmitting}
           >
